@@ -46,7 +46,7 @@ async def on_message(message):
 	if message.content.startswith("!bigbrother"):
 		await message.channel.send("https://www.skaitv.gr/show/psuchagogia/big-brother/sezon-2020-2021")
 	if message.content.startswith("help"):
-		await message.channel.send("!dice  !coin  !poutsa  !kota !gay !bigbrother  ")
+		await message.channel.send("!dice  !coin  !poutsa  !kota  !gay  !bigbrother  ")
 	if message.content.startswith("!gay"):
 		min = 0
 		max = 100
