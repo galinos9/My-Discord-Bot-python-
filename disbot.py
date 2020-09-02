@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 import os
+import time
 
 client = commands.Bot(command_prefix = '!')
 
@@ -52,6 +53,10 @@ async def on_message(message):
 		max = 100
 		results = random.randint(min, max)
 		await message.channel.send("Ειμαι " + str(results) + "% πουστρα.")
+	if message.content.startswith("!gaming"):
+		await message.channel.send("3:00:00 left.")
+
+
 
 
 client.run(os.environ['DISCORD_TOKEN'])
