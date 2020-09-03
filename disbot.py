@@ -55,7 +55,17 @@ async def on_message(message):
 		await message.channel.send("Ειμαι " + str(results) + "% πουστρα.")
 	if message.content.startswith("!gaming"):
 		await message.channel.send("3:00:00 left.")
-
+	if message.content.startswith("!game"):
+		min = 1
+		max = 3
+		results = random.randint(min, max)
+		if results == 1:
+			await message.channel.send("LOL")
+		elif results == 2:
+			await message.channel.send("LITE")
+		else:
+			await message.channel.send("RL")
+			
 
 
 
