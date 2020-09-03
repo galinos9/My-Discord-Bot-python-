@@ -3,6 +3,8 @@ from discord.ext import commands
 import random
 import os
 import time
+from datetime import datetime, timedelta
+
 
 client = commands.Bot(command_prefix = '!')
 
@@ -54,7 +56,8 @@ async def on_message(message):
 		results = random.randint(min, max)
 		await message.channel.send("Ειμαι " + str(results) + "% πουστρα.")
 	if message.content.startswith("!gaming"):
-		await message.channel.send("3:00:00 left.")
+		three_hours_from_now = (datetime.now() + timedelta(hours=3)).strftime('%H:%M:%S')
+		await message.channel.send("Θα παιξεις μεχρι " + three_hours_from_now + ".")
 	if message.content.startswith("!game"):
 		min = 1
 		max = 3
