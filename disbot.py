@@ -55,9 +55,6 @@ async def on_message(message):
 		max = 100
 		results = random.randint(min, max)
 		await message.channel.send("Ειμαι " + str(results) + "% πουστρα.")
-	if message.content.startswith("!gaming"):
-		three_hours_from_now = (datetime.now() + timedelta(hours=3)).strftime('%H:%M:%S')
-		await message.channel.send("Θα παιξεις μεχρι " + three_hours_from_now + ".")
 	if message.content.startswith("!game"):
 		min = 1
 		max = 3
@@ -69,7 +66,9 @@ async def on_message(message):
 		else:
 			await message.channel.send("RL")
 			
-
+	if message.content.startswith("!gaming"):
+		three_hours_from_now = (datetime.now() + timedelta(hours=3)).strftime('%H:%M:%S')
+		await message.channel.send("Θα παιξεις μεχρι " + three_hours_from_now + ".")
 
 
 
