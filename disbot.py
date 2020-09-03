@@ -67,7 +67,7 @@ async def on_message(message):
 		else:
 			await message.channel.send("RL")
 			
-	if message.content.startswith("!GAMING"):
+	if message.content.startswith("!gaming"):
 		three_hours_from_now = (datetime.now() + timedelta(hours=6)).strftime('%H:%M:%S')
 		await message.channel.send("Θα παιξεις μεχρι " + three_hours_from_now + ".")
 
