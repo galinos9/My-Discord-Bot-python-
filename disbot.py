@@ -69,7 +69,7 @@ async def on_message(message):
 			
 	if message.content.startswith("!gaming"):
 		if str(message.author) == "REG Galinos#4672":
-			three_hours_from_now = (datetime.now() + timedelta(hours=3)).strftime('%H:%M:%S')
+			three_hours_from_now = (datetime.now() + timedelta(hours=6)).strftime('%H:%M:%S')
 			await message.channel.send("Θα παιξεις μεχρι " + three_hours_from_now + ".")
 
 
