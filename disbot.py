@@ -40,22 +40,8 @@ async def on_message(message):
 			await message.channel.send("Korwna")
 		else:
 			await message.channel.send("Gramma")
-	if message.content.startswith("!poutsa"):
-		min = 0
-		max = 30
-		results = random.randint(min, max)
-		await message.channel.send("Τον εχω " + str(results) + " εκ.")
-	if message.content.startswith("!kota"):
-		await message.channel.send("katholou kota")
-	if message.content.startswith("!bigbrother"):
-		await message.channel.send("https://www.skaitv.gr/show/psuchagogia/big-brother/sezon-2020-2021")
 	if message.content.startswith("help"):
-		await message.channel.send("!dice  !coin  !poutsa  !kota  !gay  !game  !bigbrother  ")
-	if message.content.startswith("!gay"):
-		min = 0
-		max = 100
-		results = random.randint(min, max)
-		await message.channel.send("Ειμαι " + str(results) + "% πουστρα.")
+		await message.channel.send("!dice  !coin   !game  ")
 	if message.content.startswith("!game"):
 		min = 1
 		max = 3
